@@ -1,0 +1,294 @@
+:root {
+  --primery: #de3d0bec;
+  --bg: #010101;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg);
+  color: #fff;
+  min-height: 2000px;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: rgba(1, 1, 1, 0.8);
+  border-bottom: 1px solid #7e5f40;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+.navbar .navbar-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fcfcfb;
+  font-style: italic;
+}
+.navbar .navbar-logo span {
+  color: var(--primery);
+}
+.navbar .navbar-menu a {
+  color: #fff;
+  display: inline-block;
+  font-size: 1rem;
+  margin: 0 1rem;
+}
+/* ini caranya supaya tulisan menjadi coklat */
+.navbar .navbar-menu a:hover {
+  color: var(--primery);
+}
+.navbar .navbar-menu a:after {
+  content: "";
+  display: block;
+  padding-bottom: 0.2rem;
+  border-bottom: 0.1rem solid var(--primery);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+/* ini caranya supaya garisnya 0 jadi */
+.navbar .navbar-menu a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .feathericons a {
+  color: #fdfcfb;
+  margin: 0.5rem;
+  display: inline-block;
+}
+
+.navbar .navbar-feathericons a:hover {
+  color: var(--primery);
+}
+
+/* hero section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url("../img/bg.jpg");
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 1006%;
+  height: 30%;
+  bottom: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(1, 1, 3, 1) 5%,
+    rgba(255, 255, 255, 0) 55%
+  );
+}
+
+.hero .content {
+  padding: 1.4rem 7%;
+  max-width: 60rem;
+}
+
+.hero.content h1 {
+  font-size: 2.5rem;
+  text-shadow: 1px 1px 3px, rgba(1, 1, 3, 0, 5);
+  line-height: 1.2;
+}
+
+.hero .content h1 span {
+  color: var(--primery);
+}
+
+.hero .content p {
+  font-size: 1rem;
+  margin-top: 0.3rem;
+  font-weight: 300;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  mix-blend-mode: difference;
+}
+
+.hero .content .start {
+  margin-top: 1rem;
+  color: #fff;
+  display: inline-block;
+  padding: 0.7rem 2rem;
+  font-size: 1rem;
+  background-color: var(--primery);
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+.hero .content .start:hover {
+  color: var(--bg);
+}
+
+/* about section */
+.about,
+.produk,
+footer {
+  padding: 7rem 7% 1.4rem;
+}
+
+.about h2,
+.produk h2,
+footer h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.about h2 span,
+.produk h2 span,
+footer h2 span {
+  color: var(--primery);
+}
+
+.about .row {
+  display: flex;
+}
+
+.about .row .about-img {
+  flex: 1 1 35rem;
+}
+
+.about .row .about-img img {
+  width: 100%;
+}
+
+.about .row .content {
+  flex: 1 1 35rem;
+  padding: 0 1.5rem;
+}
+
+.about .row .content h3 {
+  font-size: 1.5rem;
+  padding-bottom: 0, 8rem;
+}
+
+.about .row .content h3 span {
+  font-style: italic;
+}
+
+.about .row .content h3 span span {
+  color: var(--primery);
+}
+
+.about .row .content p {
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+/* produk section */
+.produk p {
+  text-align: center;
+  max-width: 30rem;
+  margin: auto;
+  padding-bottom: 1rem;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.produk .fnd::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.2rem;
+  border-bottom: 0.1rem solid var(--primery);
+  transform: scaleX(0.08);
+}
+
+.produk .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+  justify-content: center;
+}
+
+.produk .row .produk-card {
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.produk .row .produk-card img {
+  border-radius: 50%;
+  width: 60%;
+}
+
+.produk .row .produk-card .produk-card-tittle {
+  margin: 1rem auto 0.5rem;
+}
+
+.produk .row .produk-card .produk-card-price {
+  font-weight: 300;
+}
+/* kontak */
+footer {
+  display: block;
+  margin-top: 2rem;
+  padding: 2rem 2rem;
+  background-color: #222;
+}
+
+footer .row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer .row .maps {
+  flex: 1 1 45rem;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+  margin: 0 1rem;
+}
+
+footer .row .content {
+  flex: 1 1 45rem;
+  margin: 1rem 1rem;
+}
+
+footer .row .content .social {
+  margin: 1rem 0;
+}
+
+footer .row .content .social a {
+  color: #fff;
+  margin-right: 2rem;
+}
+
+footer .row .content .links a {
+  color: #fff;
+  margin-right: 1.5rem;
+}
+
+footer .row .content .links a:hover,
+footer .row .content .social a:hover {
+  color: #7e5f40;
+}
+
+footer .row .content .credit {
+  margin-top: 1rem;
+}
+
+footer .row .content .credit a {
+  font-weight: 700;
+  color: #7e5f40;
+}
